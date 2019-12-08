@@ -1,12 +1,22 @@
-import { Map } from "./utils/Map";
+import { Map, Entity } from "./utils/Map";
 
 import random from "lodash/random";
 import sample from "lodash/sample";
 
 const map = new Map(10, 10);
 
-for (let i = 0; i < 4; i++) {
-  map.applyEntity(sample(["u", "d", "l", "r"]), [random(10), random(10)]);
-}
+const UP = new Entity("U");
+const DOWN = new Entity("D");
+const RIGHT = new Entity("R");
+const LEFT = new Entity("L");
 
-console.log(map.get());
+map.applyEntities([UP, DOWN, RIGHT, LEFT], 10, () => {
+  let x, y;
+  do {
+    x = random(9);
+    y = random(9);
+  } while (!map.isEmpty(x, y));
+  return [x, y];
+});
+
+console.log(map.getArray());
