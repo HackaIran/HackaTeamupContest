@@ -1,0 +1,20 @@
+{
+  "name": "hacka-teamup-contests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/HackaIran/HackaTeamupContest.git",
+  "author": "Alireza29675 <alireza.sheikholmolouki@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ./src/index.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^12.12.14",
+    "lodash": "^4.17.15"
+  }
+}

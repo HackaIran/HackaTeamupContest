@@ -1,0 +1,3 @@
+interface ISolver {}
+
+interface IGenerator {}
